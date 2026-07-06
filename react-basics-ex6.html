@@ -45,28 +45,28 @@
     }
     */
 
-    function DisplayButton(){
+    function DisplayButton() {
       const [clicked, setclicked] = React.useState(0)
 
-      function saveClicked(event){
+      function saveClicked(event) {
         setclicked(clicked + 1)
       }
 
       return (
         <>
-        <button 
-        onClick = {saveClicked}> 
-        Clicked {clicked}x times
-        </button>
+          <button
+            onClick={saveClicked}>
+            Clicked {clicked}x times
+          </button>
         </>
       )
-    }      
+    }
 
 
-    function App(){
+    function App() {
       return (
         <>
-      <DisplayButton></DisplayButton>
+          <DisplayButton></DisplayButton>
         </>
       )
     }

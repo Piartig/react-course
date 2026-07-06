@@ -23,7 +23,7 @@
       }
 
       function sendMessage() {
-        const newChatMessages= [
+        const newChatMessages = [
           ...chatMessages,
           {
             message: inputText,
@@ -31,7 +31,7 @@
             id: crypto.randomUUID()
           }
         ];
-        
+
         setChatMessages(newChatMessages);
 
         const response = Chatbot.getResponse(inputText);
@@ -47,14 +47,18 @@
         setInputText();
       }
 
-      function keyDown(event){
-        {event.key == 'Enter' && (
-          sendMessage()
-        )}
+      function keyDown(event) {
+        {
+          event.key == 'Enter' && (
+            sendMessage()
+          )
+        }
 
-        {event.key == 'Escape' && (
-         setInputText('')
-        )}
+        {
+          event.key == 'Escape' && (
+            setInputText('')
+          )
+        }
       }
 
       return (
@@ -145,4 +149,3 @@
     ReactDOM.createRoot(container).render(<App />);
   </script>
 </body>
-

@@ -1,0 +1,79 @@
+<head>
+  <title>React Basics EX</title>
+</head>
+
+<body>
+  <div class="js-container"></div>
+  <div class="js-container"></div>
+
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <script type="text/babel">
+
+    /*
+    function TextDisplay() {
+      const [inputText, setInputText] = React.useState('')
+
+      function saveInputText(event) {
+        setInputText(event.target.value)
+      }
+
+      return (
+        <>
+          <input
+            placeholder="Type"
+            size="30"
+            value={inputText}
+            onChange={saveInputText}
+          >
+          </input>
+
+          <p>{inputText}</p>
+        </>
+      );
+    }
+
+    function App() {
+      return (
+        <>
+          <TextDisplay></TextDisplay>
+        </>
+      );
+    }
+    */
+
+    function DisplayButton() {
+      const [clicked, setclicked] = React.useState(0)
+
+      function saveClicked(event) {
+        setclicked(clicked + 1)
+      }
+
+      return (
+        <>
+          <button
+            onClick={saveClicked}>
+            Clicked {clicked}x times
+          </button>
+        </>
+      )
+    }
+
+
+    function App() {
+      return (
+        <>
+          <DisplayButton></DisplayButton>
+        </>
+      )
+    }
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(<App />);
+
+  </script>
+</body>
+
+</html>
